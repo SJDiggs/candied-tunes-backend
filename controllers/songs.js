@@ -2,7 +2,7 @@
 const express = require('express')
 // const {Songs} = require('../models')
 // below imports multiple models ->
-const db = require('../models')
+const db = require('../models/Index')
 console.log(db.Songs)
 
 // INDEX (SHOWS ALL SONGS)
