@@ -68,7 +68,7 @@ app.use('/songs', songsRouter)
 
 // create a test route
 app.get("/", (req, res) => {
-    res.send("ELLO GOVNAH!");
+    res.send("Express Backend Running");
 });
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
