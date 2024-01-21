@@ -21,12 +21,9 @@ const cookieParser = require('cookie-parser');
 const { default: mongoose } = require("mongoose")
 const cors = require("cors") // Controls access to the API
 const morgan = require("morgan") 
-// const session = require('express-session')
-// const passport = require('passport');
 const authRouter = require('./routes/oauth')
 const requestRouter = require('./routes/request')
-// const htmlAuthRouter = require('./routes/htmlAuth')
-// const htmlFileRouter = require('./routes/htmlResponse')
+
 
 // import routers
 const songsRouter = require('./routes/songs')
@@ -52,15 +49,7 @@ app.use(morgan("dev")); // logging for development, not needed in prod
 app.use(express.static(path.join(__dirname, 'public')))
 app.use('/oauth', authRouter)
 app.use('/request', requestRouter)
-// app.use('/htmlAuth', htmlAuthRouter)
-// app.use('/htmlResponse', htmlFileRouter)
-// app.use(session({
-//     secret: process.env.SECRET,
-//     resave: false,
-//     saveUninitialized: true
-//   }))
-// app.use(passport.initialize())
-// app.use(passport.session())
+
 
 app.use('/songs', songsRouter)
 
